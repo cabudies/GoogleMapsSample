@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/search_places"
+        android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
 
     <fragment
         android:id="@+id/maps_fragment"
@@ -14,12 +22,4 @@
         map:cameraTargetLat="30.2970109"
         map:cameraTargetLng="78.0033964"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Drive to Madhuban Hotel"
-        android:id="@+id/map_madhuban"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
-
-</RelativeLayout>
+</LinearLayout>
